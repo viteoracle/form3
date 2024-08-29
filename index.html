@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+body {
+    background-image:url('https://i.fbcd.co/products/resized/resized-360-240/lb-letter-logo-designs-2-e43d0868ee6ef63c7038b627c2eb378ac22b0150d5ee4ea0b8487b7df6d26762.jpg') ;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+filter: brightness(0.9);
+
+}
+.contact-section {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+}
+
+.contact-intro > * + * {
+  margin-top: 1rem;
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-description {
+  color: rgb(107 114 128);
+}
+
+.form-group-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.form-input::placeholder,
+.form-textarea:focus-visible {
+  color: #6b7280;
+}
+
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 1.2rem;
+  background-color: #3124ca;
+  color: #fff;
+  padding: 13px 5px;
+  border-radius: 0.375rem;
+}
+
+.upload-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#file-upload {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+
+
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f8d775;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section p, .footer-section ul, .footer-section a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+   <!-- 
+    This is a working contact form. To receive email, 
+    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
+
+    Create Access Key here 👉 https://web3forms.com/
+ -->
+
+ <section class="contact-section">
+    <div class="contact-intro">
+      <h2 class="contact-title">LB MARKET PLACE <br> Job Application Form</h2>
+      <p class="contact-description">
+        Fill out the form below and we'll get back to you as soon as possible.
+      </p>
+    </div>
+  
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  
+      <input type="hidden" name="access_key" value="1a01da4c-32bf-4647-a031-6671e3c04665" />
+     <!--    <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+      <input type="hidden" name="from_name" value="My Website" />
+    More custom ization options available in the docs: https://docs.web3forms.com -->
+  
+      <div class="form-group-container">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+        </div>
+        <div class="form-group">
+          <label for="phone" class="form-label">Phone</label>
+          <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+        </div>
+        <div class="form-group">
+            <label for="phone" class="form-label">social media interface (SMI)</label>
+            <input id="phone" name="phone" class="form-input" placeholder="facebook" type="text" />
+          </div>
+        <div class="form-group">
+            <label for="phone" class="form-label">current city</label>
+            <input id="phone" name="phone" class="form-input" placeholder=" warri, delta state" type="text" />
+          </div>
+        <div class="form-group">
+            <label for="phone" class="form-label">country</label>
+            <input id="phone" name="phone" class="form-input" placeholder="Nigeria" type="text" />
+          </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Your bio "></textarea>
+        </div>
+      </div>
+        <BR><br><br
+
+        <div class="upload-container">
+            <h2>Upload Your CV</h2>
+                <label for="file-upload" class="custom-file-upload">
+                    Choose File
+                </label>
+                <input id="file-upload" type="file" name="file">
+
+        
+        </div>
+    
+        <button class="form-submit" type="submit">Send Message</button>
+    </form>
+  
+  </section> 
+</body>
+<footer>
+    <p>&copy; 2024 lb market place. All rights reserved.</p>
+    
+</footer>
+</html>
+
+
+
+
